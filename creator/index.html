@@ -13,8 +13,49 @@
     <select id="card-type">
         <option value="monster-normal">Monstruo Normal</option>
         <option value="monster-effect">Monstruo Efecto</option>
-        <option value="token">Token</option>
+        <option value="monster-ritual">Monstruo Ritual</option>
+        <option value="monster-fusion">Monstruo Fusión</option>
+        <option value="monster-sincro">Monstruo Sincro</option>
+        <option value="monster-xyz">Monstruo Xyz</option>
+        <option value="monster-pendulo">Monstruo Péndulo</option>
+        <option value="monster-link">Monstruo Link</option>
+        <option value="monster-token">Monstruo Token</option>
+        <option value="magia">Magia</option>
+        <option value="trampa">Trampa</option>
     </select>
+	
+	<div id="image-container">
+        <img style="height:50px; display:none;" id="monster-normal" src="monster-normal-bg.png" alt="Monstruo Normal">
+        <img style="height:50px; display:none;" id="monster-effect" src="monster-effect-bg.png" alt="Monstruo Efecto">
+        <img style="height:50px; display:none;" id="monster-ritual" src="monster-ritual-bg.png" alt="Monstruo Ritual">
+        <img style="height:50px; display:none;" id="monster-fusion" src="monster-fusion-bg.png" alt="Monstruo Fusión">
+        <img style="height:50px; display:none;" id="monster-sincro" src="monster-sincro-bg.png" alt="Monstruo Sincro">
+        <img style="height:50px; display:none;" id="monster-xyz" src="monster-xyz-bg.png" alt="Monstruo Xyz">
+        <img style="height:50px; display:none;" id="monster-pendulo" src="monster-pendulo-bg.png" alt="Monstruo Péndulo">
+        <img style="height:50px; display:none;" id="monster-link" src="monster-link-bg.png" alt="Monstruo Link">
+        <img style="height:50px; display:none;" id="monster-token" src="monster-token-bg.png" alt="Monstruo Token">
+        <img style="height:50px; display:none;" id="magia" src="magia-normal-bg.png" alt="Magia">
+        <img style="height:50px; display:none;" id="trampa" src="trampa-normal-bg.png" alt="Trampa">
+    </div>
+	
+	<script>
+        const select = document.getElementById('card-type');
+        const images = document.querySelectorAll('#image-container img');
+
+        select.addEventListener('change', function() {
+            // Ocultar todas las imágenes
+            images.forEach(img => img.style.display = 'none');
+
+            // Mostrar la imagen correspondiente
+            const selectedValue = select.value;
+            if (selectedValue) {
+                const selectedImage = document.getElementById(selectedValue);
+                if (selectedImage) {
+                    selectedImage.style.display = 'block';
+                }
+            }
+        });
+    </script>
     
     <label for="card-level">Nivel:</label>
     <input type="number" id="card-level" value="1" required>
@@ -23,7 +64,11 @@
     <select id="card-attribute">
         <option value="luz">Luz</option>
         <option value="oscuridad">Oscuridad</option>
+        <option value="agua">Agua</option>
+        <option value="fuego">Fuego</option>
         <option value="tierra">Tierra</option>
+        <option value="viento">Viento</option>
+        <option value="divino">Divino</option>
         <!-- Agrega más atributos según sea necesario -->
     </select>
     

@@ -51,8 +51,32 @@ document.getElementById("card-defense").addEventListener("input", validateAttack
                     case "monster-effect":
                         cardBackgroundURL = "monster-effect-bg.png"; 
                         break;
-                    case "token":
-                        cardBackgroundURL = "token-bg.png"; 
+                    case "monster-ritual":
+                        cardBackgroundURL = "monster-ritual-bg.png"; 
+                        break;
+                    case "monster-fusion":
+                        cardBackgroundURL = "monster-fusion-bg.png"; 
+                        break;
+                    case "monster-sincro":
+                        cardBackgroundURL = "monster-sincro-bg.png"; 
+                        break;
+                    case "monster-xyz":
+                        cardBackgroundURL = "monster-xyz-bg.png"; 
+                        break;
+                    case "monster-pendulo":
+                        cardBackgroundURL = "monster-pendulo-bg.png"; 
+                        break;
+                    case "monster-link":
+                        cardBackgroundURL = "monster-link-bg.png"; 
+                        break;
+                    case "monster-token":
+                        cardBackgroundURL = "monster-token-bg.png"; 
+                        break;
+                    case "magia":
+                        cardBackgroundURL = "magia-normal-bg.png"; 
+                        break;
+                    case "trampa":
+                        cardBackgroundURL = "trampa-normal-bg.png"; 
                         break;
                     default:
                         alert("Tipo de carta no reconocido.");
